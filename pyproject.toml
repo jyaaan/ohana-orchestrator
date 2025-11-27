@@ -1,0 +1,52 @@
+[project]
+name = "my-flask-app"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+###############################################
+# BLACK — your formatter
+###############################################
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+exclude = '''
+(
+  /migrations
+  | /venv
+  | /.venv
+)
+'''
+
+###############################################
+# RUFF — linting + import sorting only
+###############################################
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["migrations", "venv", ".venv"]
+
+# DO NOT enable ruff.format.
+# Black is the only formatter in this house, babe.
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "I",   # import rules (isort replacement)
+  "B",   # flake8-bugbear
+  "UP"   # pyupgrade
+]
+
+ignore = [
+  "E501"   # line length — Black handles this
+]
+
+###############################################
+# MYPY — type checking (optional but good practice)
+###############################################
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+warn_unused_ignores = true
+exclude = "migrations|venv|.venv"

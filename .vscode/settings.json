@@ -1,0 +1,13 @@
+{
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      // Ruff still fixes lint issues here
+      "source.fixAll": "always",
+      "source.organizeImports": "never"
+    }
+  },
+
+  "ruff.nativeServer": "on"
+}
