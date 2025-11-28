@@ -1,50 +1,69 @@
-aiohttp==3.9.0
-aiohttp-retry==2.8.3
-aiosignal==1.3.1
-alembic==1.12.1
-annotated-types==0.6.0
-anyio==3.7.1
-APScheduler==3.10.4
-async-timeout==4.0.3
-attrs==23.1.0
-blinker==1.6.2
-certifi==2023.11.17
-charset-normalizer==3.3.2
-click==8.1.6
-distro==1.8.0
-exceptiongroup==1.2.0
-Flask==2.3.2
-Flask-Migrate==4.0.5
-Flask-SQLAlchemy==3.1.1
-frozenlist==1.4.0
-gunicorn==21.2.0
-h11==0.14.0
-httpcore==1.0.2
-httpx==0.25.2
-idna==3.5
+# Core web framework - KEEPING MAJOR VERSIONS (Flask 2.x, Werkzeug 2.x)
+Flask==2.3.3
+Werkzeug==2.3.8
+Jinja2==3.1.4
 itsdangerous==2.1.2
-Jinja2==3.1.2
-Mako==1.3.0
-MarkupSafe==2.1.3
-multidict==6.0.4
-openai==1.3.5
-packaging==23.2
-psycopg2-binary==2.9.9
-pydantic==2.5.2
-pydantic_core==2.14.5
-PyJWT==2.8.0
-python-dotenv==1.0.0
-pytz==2023.3.post1
-requests==2.31.0
-six==1.16.0
-sniffio==1.3.0
-SQLAlchemy==2.0.23
+click==8.1.7
+blinker==1.8.2
+
+# Database - Safe minor/patch updates
+SQLAlchemy==2.0.36
 SQLAlchemy-Continuum==1.4.0
-SQLAlchemy-Utils==0.41.1
-tqdm==4.66.1
-twilio==8.10.2
-typing_extensions==4.8.0
+SQLAlchemy-Utils==0.41.2
+psycopg2-binary==2.9.10
+alembic==1.13.2
+Flask-Migrate==4.0.7
+Flask-SQLAlchemy==3.1.1
+
+# OpenAI - UPDATED to latest (requires code changes)
+openai==1.30.1
+
+# Messaging - Safe patch updates
+twilio==8.10.3
+
+# Configuration & validation - Safe minor updates within 2.x
+pydantic==2.9.2
+pydantic_core==2.23.4
+python-dotenv==1.0.1
+
+# HTTP clients - Safe minor/patch updates
+requests==2.32.3
+httpx==0.27.2
+httpcore==1.0.5
+aiohttp==3.10.11
+aiohttp-retry==2.9.0
+aiosignal==1.3.1
+
+# Async & concurrency - NOW UNLOCKED (openai 1.30+ supports anyio 4.x)
+anyio==4.6.0
+async-timeout==4.0.3
+sniffio==1.3.1
+
+# Scheduling - No update available (already latest)
+APScheduler==3.10.4
+
+# Server - Safe minor update
+gunicorn==23.0.0
+
+# Utilities - Safe updates
+pytz==2024.1
 tzlocal==5.2
-urllib3==2.1.0
-Werkzeug==2.3.6
-yarl==1.9.3
+certifi==2024.8.30
+charset-normalizer==3.4.0
+idna==3.10
+urllib3==2.2.3
+packaging==24.2
+six==1.17.0
+tqdm==4.67.1
+distro==1.9.0
+attrs==24.2.0
+frozenlist==1.4.1
+multidict==6.1.0
+yarl==1.18.3
+h11==0.14.0
+Mako==1.3.6
+MarkupSafe==3.0.2
+exceptiongroup==1.2.2
+annotated-types==0.7.0
+typing_extensions==4.12.2
+PyJWT==2.9.0
